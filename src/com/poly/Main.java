@@ -1,6 +1,7 @@
 package com.poly;
 import java.util.*;
 import Atmproject.Pinnumber.Pinnumber;
+import transaction.transactionType;
 public class Main {
 
     public static void main(String[] args) {
@@ -49,5 +50,9 @@ public class Main {
         if(count <3 && passwordCount <3) {
             Pinnumber.main(null);
         }
+        if(count <3 && passwordCount <3) {
+            transactionType.main(null);
+        }
+
     }
 }
