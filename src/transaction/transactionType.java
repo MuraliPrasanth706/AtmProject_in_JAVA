@@ -1,6 +1,8 @@
 package transaction;
 import java.util.*;
 
+import static java.lang.System.exit;
+
 class transMode{
     int  Creditamount,WithdrawMoney,TotalAmount_in_Bank ;
     int TotalAmount_in_account = 10000;
@@ -21,9 +23,11 @@ class transMode{
             case 1:
                 TotalAmount_in_Bank = TotalAmount_in_account-WithdrawMoney;
                 System.out.println("Total_Balance :"+TotalAmount_in_Bank);
+                System.out.println("Thanks For Visiting");
                 break;
             case 2:
                 exit(0);
+                System.out.println("Thanks For Visiting");
                 break;
         }
     }
@@ -48,23 +52,27 @@ class creditMode extends transMode{
                 if (Creditamount >=100) {
                     TotalAmount_in_Bank = TotalAmount_in_account + Creditamount;
                     System.out.println("Total_Balance :" + TotalAmount_in_Bank);
+                    System.out.println("Thanks For Visiting");
                 }
                 break;
             case 2:
                 exit(0);
+                System.out.println("Thanks For Visiting");
                 break;
         }
     }
 }
 class BalanceMode extends transMode{
     public void BalanceAmount(){
-        System.out.println("Balance : " +TotalAmount_in_Bank);
+
+        System.out.println("Balance : " +TotalAmount_in_account);
+        System.out.println("Thanks For Visiting");
     }
 }
 class TransactionMOde{
     Scanner Allmode = new Scanner(System.in);
     public void Money(){
-        System.out.println("Enter the choice \n 1.Withdraw \n 2.credit \n 3.Balance " );
+        System.out.println("Enter the choice \n 1.Withdraw \n 2.credit \n 3.Balance \n 4.Exit " );
         int Choice = Allmode.nextInt();
         switch (Choice){
             case 1:
@@ -78,6 +86,8 @@ class TransactionMOde{
             case 3:
                 BalanceMode obj2 = new BalanceMode();
                 obj2.BalanceAmount();
+            case 4:
+                exit(0);
         }
     }
 }
