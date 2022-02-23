@@ -12,7 +12,7 @@ class transMode{
          WithdrawMoney =TypeInput.nextInt();
         if (WithdrawMoney > TotalAmount_in_account){
             System.out.println("Not Sufficient Balance");
-        }else if(WithdrawMoney <= TotalAmount_in_account){
+        }else {
             System.out.println("Money Withdraw SuccessFully");
         }
         
